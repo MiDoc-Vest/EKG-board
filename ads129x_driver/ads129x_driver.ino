@@ -32,6 +32,7 @@
 
 #define BAUD_RATE 2000000     // WiredSerial ignores this and uses the maximum rate
 #define WiredSerial SerialUSB // use the Arduino Due's Native USB port
+//#define WiredSerial Serial
 
 #define SPI_BUFFER_SIZE 200
 #define OUTPUT_BUFFER_SIZE 1000
@@ -136,6 +137,9 @@ void writeRegisterCommandDirect(unsigned char register_number, unsigned char reg
 
 void setup() {
     WiredSerial.begin(BAUD_RATE);
+    while(!WiredSerial);
+    WiredSerial.println("Setting up...\n");
+    
     pinMode(PIN_LED, OUTPUT);     // Configure the onboard LED for output
     digitalWrite(PIN_LED, LOW);   // default to LED off
 

@@ -22,7 +22,7 @@
 
 // uncomment for debugging on Serial interface (programming port)
 // you must connect to Serial port first, then SerialUSB, since Serial will reset the Arduino Due
-//#define SERIALCOMMAND_DEBUG 1
+#define SERIALCOMMAND_DEBUG 1
 
 #if defined(WIRING) && WIRING >= 100
 #include <Wiring.h>

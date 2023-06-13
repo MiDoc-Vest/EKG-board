@@ -4,7 +4,7 @@
 import sys
 import hackeeg
 from hackeeg import ads1299
-SERIAL_PORT_PATH = "/dev/cu.usbmodem14434401"  # your actual path to the Arduino Native serial port device goes here
+SERIAL_PORT_PATH = "/dev/ttyACM0"  # your actual path to the Arduino Native serial port device goes here
 
 
 hackeeg = hackeeg.HackEEGBoard(SERIAL_PORT_PATH)
